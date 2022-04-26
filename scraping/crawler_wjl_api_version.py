@@ -73,4 +73,3 @@ print(links)
 for link in links:
     title, body, written_at = read_article(link)
     print(title)
-

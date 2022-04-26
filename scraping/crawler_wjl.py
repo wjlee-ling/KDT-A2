@@ -53,14 +53,15 @@ def read_article(url, driver):
     '''
     
     driver.get(url)
-    title = driver.find_element(by=By.CSS_SELECTOR, value="#articleTitle").text.strip()
-    body = driver.find_element(by=By.CSS_SELECTOR, value='#articleBodyContents').text
+    title = driver.find_element(by=By.CSS_SELECTOR, value=".media_end_head_headline").text.strip() # "#articleTitle"
+    body = driver.find_element(by=By.CSS_SELECTOR, value="._article_body").text.strip() #'#articleBodyContents' 
     try:
         caption = driver.find_element(by=By.CSS_SELECTOR, value='.img_desc').text
         body = body.replace(caption, '').strip() # removing image captions
     except:
         body = body.strip()
-    written_at = driver.find_element(by=By.CSS_SELECTOR, value='#main_content > div.article_header > div.article_info > div > span.t11').text.split()[0]
+        
+    written_at = driver.find_element(by=By.CSS_SELECTOR, value="#ct > div.media_end_head.go_trans > div.media_end_head_info.nv_notrans > div.media_end_head_info_datestamp > div > span").text.split()[0] #'#main_content > div.article_header > div.article_info > div > span.t11'
     #title = driver.find_element_by_css_selector("#articleTitle").text
 
     return title, body, written_at 
@@ -232,7 +233,9 @@ def scraper(publishers, n=1, search_range=None):
     driver.close()
     return dfs
 
-newspapers = ['조선일보','경향신문']
-time_range = ['2015.03.23', '2015.03.23']
+newspapers = ['동아일보']
+#time_range = ['2015.03.23', '2015.03.23']
 ## csv형식으로 corpus 만들기
-# corpora =scraper(newspapers, n=10, search_range=time_range)
+corpora =scraper(newspapers, n=10000, search_range=None)
+for paper, corpus in zip(newspapers, corpora]:
+    corpus.to_csv(r"C:\Users\oian\Documents\GitHub\A2-TeamProject\scraping\corpus\corpus_{paper}_raw.csv", encoding='utf-8-sig', index=False)
