@@ -1,0 +1,20 @@
+{% extends "base.html" %} 
+{% block main %}
+<h1>Tone & Fact</h1>
+
+<form method="POST">
+    <p>
+        {{prompt_form.newspaper.label}}
+        {{prompt_form.newspaper()}}
+
+        {{prompt_form.lead.label}}
+        {{prompt_form.lead(size=50)}}
+
+        {{prompt_form.submit()}}
+    </p>
+</form>
+
+<p>
+    생성결과: {{generated}}
+</p>
+{% endblock %}
