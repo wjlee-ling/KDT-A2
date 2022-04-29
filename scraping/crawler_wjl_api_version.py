@@ -31,7 +31,7 @@ def read_article(url):
     written_at = soup.select_one('#main_content > div.article_header > div.article_info > div > span.t11').text.split()[0]
     return title, body, written_at
 
-def is_opinion(title):
+def is_editorial(title):
     if title.startswith('[<b>사설</b>]') or title.endswith('[<b>사설</b>]'): #or title.startswith('&lt;<b>사설</b>&gt')
         # [사설] : 경향, 국민, 서울신문, 세계일보, 조선일보, 중앙일보, 한겨레, 한국일보, 매일경제, 한국경제, 서울경제
         return True
@@ -59,7 +59,7 @@ def search_opinions(publisher='default', start=1, display=100):
         for item in items:
             link = item['link']
             title = item['title']
-            if 'news.naver.com' in link and is_opinion(title):
+            if 'news.naver.com' in link and is_editorial(title):
                 news_links.append(link)
         time.sleep(0.15)
     else:

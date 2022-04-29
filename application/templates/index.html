@@ -4,8 +4,6 @@
 
 <form method="POST">
     <p>
-        {{prompt_form.newspaper.label}}
-        {{prompt_form.newspaper()}}
 
         {{prompt_form.lead.label}}
         {{prompt_form.lead(size=50)}}
@@ -13,8 +11,15 @@
         {{prompt_form.submit()}}
     </p>
 </form>
+<script type="text/javascript">// <![CDATA[
+    function loading(){
+        $("#loading").show();
+        $("#content").hide();       
+    }
+// ]]>
+</script>
 
-<p>
-    생성결과: {{generated}}
-</p>
+{% block result %} 
+{% endblock %}
+
 {% endblock %}
