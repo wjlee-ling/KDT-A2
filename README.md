@@ -1,6 +1,8 @@
 Grepp Programmers KDT 인공지능 데브 코스 3기 A2 팀 프로젝트.
 
-SKT의 KoGPT2를 5대 일간지(조선일보, 동아일보, 한겨레, 중앙일보, 경향신문)의 사설로 매일 추가 훈련시켜 일간지들의 논조를 반영하도록 함.  
+같은 정치적 이슈라도 언론사에 따라 미세하게 다른 논조를 보인다는 점에 착안하여, SKT의 KoGPT2를 5대 일간지(조선일보, 동아일보, 한겨레, 중앙일보, 경향신문)의 사설(일간지별 각 만여개)로 파인튜닝한 생성모델을 생성.
+
+
 
 **KoGPT-taf Tokenizer 사양**
 | vocab size | max_length | class | special tokens |
