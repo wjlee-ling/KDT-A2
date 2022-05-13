@@ -1,6 +1,6 @@
-A2 팀 프로젝트
+Grepp Programmers KDT 인공지능 데브 코스 3기 A2 팀 프로젝트.
 
-앱 Tone & Fact 이용은 [여기](http://13.58.98.48:8080/).
+SKT의 KoGPT2를 5대 일간지(조선일보, 동아일보, 한겨레, 중앙일보, 경향신문)의 사설로 매일 추가 훈련시켜 일간지들의 논조를 반영하도록 함.  
 
 **KoGPT-taf Tokenizer 사양**
 | vocab size | max_length | class | special tokens |
@@ -13,5 +13,7 @@ SKT의 KoGPT2의 사전(51,200)에 13개의 정치적으로 주요한 개체명�
 | model type | # of hidden | # of layers and heads | 최대 생성 길이 |
 | :---: | :---: | :---: | :---: |
 | GPT2 | 768 | 12 | 128 토큰 |
+
+
 
 ![project architecture drawio (2)](https://user-images.githubusercontent.com/83438381/163582843-4e0869d0-67dd-4dc9-889e-fe034b784275.png)
