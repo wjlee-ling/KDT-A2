@@ -14,8 +14,16 @@ SKT의 KoGPT2의 사전(51,200)에 13개의 정치적으로 주요한 개체명�
 | :---: | :---: | :---: | :---: |
 | GPT2 | 768 | 12 | 128 토큰 |
 
+```python3
+import torch
+from transformers import PreTrainedTokenizerFast, GPT2LMHeadModel
 
+checkpoint = 'A2/kogpt2-taf'
+tokenizer = PreTrainedTokenizerFast.from_pretrained(checkpoint)
+model = GPT2LMHeadModel.from_pretrained(checkpoint)
 
+text = 
 
+```
 
 <!--![project architecture drawio (2)](https://user-images.githubusercontent.com/83438381/163582843-4e0869d0-67dd-4dc9-889e-fe034b784275.png)-->
