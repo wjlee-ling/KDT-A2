@@ -22,8 +22,9 @@ checkpoint = 'A2/kogpt2-taf'
 tokenizer = PreTrainedTokenizerFast.from_pretrained(checkpoint)
 model = GPT2LMHeadModel.from_pretrained(checkpoint)
 
-text = 
-
+text = '고용유연화에 대한 정부의 입장은'
+results = model.generate(text)
+print(results)
 ```
 
 <!--![project architecture drawio (2)](https://user-images.githubusercontent.com/83438381/163582843-4e0869d0-67dd-4dc9-889e-fe034b784275.png)-->
