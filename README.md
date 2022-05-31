@@ -26,5 +26,6 @@ text = '고용유연화에 대한 정부의 입장은'
 results = model.generate(text)
 print(results)
 ```
+![kogpt_taf_ex1](https://user-images.githubusercontent.com/61496071/171301054-6990a6ad-3573-4364-b72f-67ee231ea9c3.png)
 
 <!--![project architecture drawio (2)](https://user-images.githubusercontent.com/83438381/163582843-4e0869d0-67dd-4dc9-889e-fe034b784275.png)-->
